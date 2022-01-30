@@ -1,12 +1,13 @@
 <div id="<%= dom_id task_list %>">
-  <p>
-    <strong>Title:</strong>
-    <%= task_list.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= task_list.description %>
-  </p>
-
+<div class="card bucket" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= task_list.title %></h5>
+        <strong>Description:</strong>
+        <%= task_list.description %>
+      </p>
+        <p>
+          <%= link_to "Open this bucket", task_list, class: "btn btn-secondary" %>
+        </p>
+  </div><!-- End card body -->
+</div><!-- End card -->
 </div>

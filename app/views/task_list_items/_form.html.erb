@@ -1,4 +1,7 @@
+<div class="form-group">
 <%= form_for([@task_list, @task_list.task_list_items.build]) do |f| %>
-    <%= f.text_field :content, placeholder: "New task" %>
-    <%= f.submit %>
+    <%= f.text_field :content, placeholder: "Add a new task",  class: "form-control" %>
+    <%= f.submit "+ Add task", class:"btn btn-outline-success btn-sm" %>
 <% end %>
+<br/>
+<div>
