@@ -6,6 +6,16 @@ class TaskListItemsController < ApplicationController
         redirect_to @task_list
     end
 
+    def destroy
+        @task_list_item = @task_list.task_list_items.find(params[:id])
+        if @task_list_item.destroy
+            flash[:success] = "Task was deleted."
+        else
+            flash[:error] = "Task could not be deleted."
+        redirect_to@task_list
+        end
+    end
+
     private
     def set_task_list
         @task_list = TaskList.find(params[:task_list_id])

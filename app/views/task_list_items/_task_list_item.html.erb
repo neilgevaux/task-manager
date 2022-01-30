@@ -1,1 +1,2 @@
 <p><%= task_list_item.content %></p>
+<%= button_to "Delete", task_list_task_list_item_path(@task_list, task_list_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
