@@ -1,9 +1,11 @@
 class TaskListsController < ApplicationController
   before_action :set_task_list, only: %i[ show edit update destroy ]
+  # before_action :set_task_list_items, only: %i[ show edit update destroy ]
 
   # GET /task_lists or /task_lists.json
   def index
     @task_lists = TaskList.all
+    @task_list_items = TaskListItem.all
   end
 
   # GET /task_lists/1 or /task_lists/1.json
@@ -62,6 +64,10 @@ class TaskListsController < ApplicationController
     def set_task_list
       @task_list = TaskList.find(params[:id])
     end
+
+    def set_task_list_item
+      @task_list_item = @task_list.task_list_items.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
     def task_list_params

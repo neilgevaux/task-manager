@@ -4,4 +4,9 @@
     <%= f.submit "+ Add task", class:"btn btn-outline-success btn-sm" %>
 <% end %>
 <br/>
+    <div>
+        <p>Total tasks in this bucket:</p>
+        <%= @task_list.task_list_items.count %><!-- Count items in the list -->
+    </div>
+    <%= render "task_list_items/count" %>
 <div>
