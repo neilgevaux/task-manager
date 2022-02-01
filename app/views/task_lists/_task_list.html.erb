@@ -11,6 +11,8 @@
             <p>Bucket ID: <%= task_list.id %></p>
 
              <p>Number of tasks: <%= @task_list_items.select(:task_list_id).count(:task_list_id) %></p>
+
+             <p>Number of tasks: <%= TaskListItem.find(9) %></p>
     </div><!-- End card body -->
   </div><!-- End card -->
   <% render "layouts/number" %>
