@@ -29,9 +29,9 @@ class TaskListItemsController < ApplicationController
         @task_list = TaskList.find(params[:task_list_id])
     end
 
-    # def set_task_list_item
-    #     @task_list_item = @task_list.task_list_items.find(params[:id])
-    # end
+    def set_task_list_item
+        @task_list_item = @task_list.task_list_items.find(params[:id])
+    end
 
     def task_list_item_params
         params[:task_list_item].permit(:content)
