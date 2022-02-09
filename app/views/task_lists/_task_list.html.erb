@@ -4,24 +4,12 @@
       <h5 class="card-title"><%= task_list.title %></h5>
           <strong>Description:</strong>
           <%= task_list.description %>
-         <%# <%= render partial: "task_list_items/count", locals: { task_list_items: @task_list_items } %>
           <p>
             <%= link_to "Open this bucket", task_list, class: "btn btn-secondary btn-sm" %>
           </p>
-            <p>Bucket ID: <%= task_list.id %></p>
-
-             <p>Number of tasks: <%= @task_list_items.select(:task_list_id).count(:task_list_id) %></p>
-
-             <p>Number of tasks: <%= TaskListItem.find(9) %></p>
+          <p>Bucket ID: <%= @bucket_id = task_list.id %></p>
+          <p>Number of tasks: <%= @task_list_items.select(@bucket_id).count(:task_list_id) %></p>
+          <p>Tasks: <%= @item_count %></p>
     </div><!-- End card body -->
   </div><!-- End card -->
-  <% render "layouts/number" %>
-    <%# <% @task_list_items.each do |t| %>
-    <%# <%= t.task_list_id %>
-    <% if %>
-
-     
-
-    <% end %>
- <%# <% end %>
 </div>

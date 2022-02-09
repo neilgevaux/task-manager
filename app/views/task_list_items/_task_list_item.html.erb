@@ -9,8 +9,8 @@
         </ul>
      </div>
      <div class="btn-group">
-        <%= button_to "Mark as complete", complete_task_list_task_list_item_path(@task_list, task_list_item.id), method: :patch, class: "btn btn-outline-warning btn-sm grouped" %>
-        <%= button_to "Delete", task_list_task_list_item_path(@task_list, task_list_item.id), method: :delete, class: "btn btn-outline-danger btn-sm", data: { confirm: "Are you sure?" } %>
+        <%= button_to "Completed", complete_task_list_task_list_item_path(@task_list, task_list_item.id), method: :patch, class: "btn btn-secondary btn-sm grouped" %>
+        <%= button_to "Delete", task_list_task_list_item_path(@task_list, task_list_item.id), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" } %>
     </div>
 
     <% else %>
@@ -21,8 +21,8 @@
          </ul>
     </div>
     <div class="btn-group">
-        <%= button_to "Mark as complete", complete_task_list_task_list_item_path(@task_list, task_list_item.id), method: :patch, class: "btn btn-outline-warning btn-sm grouped" %>
-        <%= button_to "Delete", task_list_task_list_item_path(@task_list, task_list_item.id), method: :delete, class: "btn btn-outline-danger btn-sm", data: { confirm: "Are you sure?" } %>
+        <%= button_to "Mark as complete", complete_task_list_task_list_item_path(@task_list, task_list_item.id), method: :patch, class: "btn btn-warning btn-sm grouped" %>
+        <%= button_to "Delete", task_list_task_list_item_path(@task_list, task_list_item.id), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" } %>
     </div>
 
     <% end %>

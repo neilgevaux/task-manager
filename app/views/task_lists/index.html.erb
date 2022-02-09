@@ -7,7 +7,8 @@
   <div class="row"><!-- Begins the row -->
     <% @task_lists.each do |task_list| %>
         <div class="col-sm-4"><!-- Need to add the column after the start of the loop to get the cards to align in columns -->
-
+          
+          <!-- Render the grid of buckets -->
           <%= render task_list %>
 
           <p>
@@ -17,6 +18,9 @@
         </div><!-- End col -->
       <% end %>
   </div><!-- End row --> 
+  <div>
+    <p>Number of tasks in all buckets: <%= @task_list_items.select(:task_list_id).count(:task_list_id) %></p>
+  </div>
 </div>
 
 
